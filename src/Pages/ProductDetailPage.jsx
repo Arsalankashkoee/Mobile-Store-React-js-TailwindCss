@@ -114,7 +114,7 @@ const ProductDetailPage = () => {
           disabled={CheckInCart(cart, selectedProduct) ? true : false}
         >
           <span>
-            <IoCartOutline className="w-6 h-6 mr-3" />
+            <IoCartOutline className="w-6 h-6 mr-4" />
           </span>
           <span>
             {CheckInCart(cart, selectedProduct) ? "In Cart" : "Add To Cart"}
