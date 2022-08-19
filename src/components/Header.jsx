@@ -13,7 +13,7 @@ const Header = () => {
   // console.log(userData);
 
   return (
-    <header className="bg-violet-200 shadow-lg p-2 mb-11 sticky top-0">
+    <header className="bg-violet-200 shadow-lg p-2 mb-11 sticky top-0 z-10">
       <nav className="container w-full flex items-center justify-between">
         {/* left */}
         <ul className="flex items-center justify-center gap-11">

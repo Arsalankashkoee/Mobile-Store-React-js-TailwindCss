@@ -4,6 +4,7 @@ import { useCart, useCartActions } from "../Context/CartProvider";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import { BsCurrencyDollar } from "react-icons/bs";
+import Carousel from "../components/Carousel";
 
 // if product was in cart then the text of button change to "In Cart" instead of "Add To Cart"
 const CheckInCart = (cart, product) => {
@@ -22,6 +23,7 @@ const HomePage = () => {
 
   return (
     <main className="">
+      <Carousel/>
       {/* product-list */}
       <section className="container grid grid-cols-auto-fit gap-11">
         {products.map((product) => {
