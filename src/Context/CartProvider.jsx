@@ -11,11 +11,6 @@ const initialState = {
 
   cart: JSON.parse(localStorage.getItem(LOCAL_STORAGE_PRODUCT_KEY)) || [],
 
-  // cart:
-  //   localStorage.getItem(LOCAL_STORAGE_PRODUCT_KEY) === null
-  //     ? []
-  //     : JSON.parse(localStorage.getItem(LOCAL_STORAGE_PRODUCT_KEY)),
-
   total: 0,
 };
 
@@ -83,7 +78,7 @@ const CartProvider = ({ children }) => {
   useEffect(() => {
     const data = JSON.stringify(cart.cart);
     localStorage.setItem(LOCAL_STORAGE_PRODUCT_KEY, data);
-  }, [cart.cart,cart.total]);
+  }, [cart.cart, cart.total]);
 
   return (
     <CartContext.Provider value={cart}>
