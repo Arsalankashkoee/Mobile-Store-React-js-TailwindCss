@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import { BsCurrencyDollar } from "react-icons/bs";
 import Carousel from "../components/Carousel";
+import HomeBlocks from "../components/HomeBlocks";
 
 // if product was in cart then the text of button change to "In Cart" instead of "Add To Cart"
 const CheckInCart = (cart, product) => {
@@ -23,7 +24,19 @@ const HomePage = () => {
 
   return (
     <main className="">
-      <Carousel/>
+      {/* carousel */}
+      <Carousel />
+
+      {/* Home Blocks */}
+      <HomeBlocks />
+
+      <div className="flex justify-center items-center">
+        <span className=" mb-6 text-xl md:text-2xl relative font-black sm:mb-10">
+          <div className="z-10 relative text-center">Products</div>
+          <span className="w-full h-4 bg-purple-200 absolute -bottom-1 left-0"></span>
+        </span>
+      </div>
+
       {/* product-list */}
       <section className="container grid grid-cols-auto-fit gap-11">
         {products.map((product) => {
