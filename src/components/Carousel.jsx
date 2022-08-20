@@ -2,10 +2,16 @@ import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
+import imgOne from "../Images/1.jpg";
+import imgTwo from "../Images/2.jpg";
+import imgThree from "../Images/3.jpg";
+import imgFour from "../Images/4.jpg";
+import imgFive from "../Images/5.jpg";
+import imgSix from "../Images/6.jpg";
 
 const Carousel = () => {
   return (
-    <div className="mb-60 mt-20 ">
+    <div className="mb-32 mt-20 ">
       {/* Carousel wrapper */}
       <div
         id="carouselExampleCaptions"
@@ -56,49 +62,49 @@ const Carousel = () => {
         {/* images */}
         <div className="carousel-inner relative w-full overflow-hidden">
           {/* Item 1 */}
-          <div className="carousel-item active relative float-left w-full h-96">
+          <div className="carousel-item active relative float-left w-full h-full  ">
             <img
-              src="https://s6.uupload.ir/files/12pro_max_thq8.png"
+              src={imgOne}
               className="block w-full rounded-xl h-full object-contain"
               alt="..."
             />
           </div>
           {/* Item 2 */}
-          <div className="carousel-item relative float-left w-full h-96">
+          <div className="carousel-item relative float-left w-full h-full">
             <img
-              src="https://s6.uupload.ir/files/13pro__qzga.png"
+              src={imgTwo}
               className="block w-full rounded-xl h-full object-contain"
               alt="..."
             />
           </div>
           {/* Item 3 */}
-          <div className="carousel-item relative float-left w-full h-96">
+          <div className="carousel-item relative float-left w-full h-full">
             <img
-              src="https://s6.uupload.ir/files/13pro_max_yaxo.png"
+              src={imgThree}
               className="block w-full rounded-xl h-full object-contain"
               alt="..."
             />
           </div>
           {/* Item 4 */}
-          <div className="carousel-item relative float-left w-full h-96">
+          <div className="carousel-item relative float-left w-full h-full">
             <img
-              src="https://s6.uupload.ir/files/iphone_x_9ff.png"
+              src={imgFour}
               className="block w-full rounded-xl h-full object-contain"
               alt="..."
             />
           </div>
           {/* Item 5 */}
-          <div className="carousel-item relative float-left w-full h-96">
+          <div className="carousel-item relative float-left w-full h-full">
             <img
-              src="https://s6.uupload.ir/files/macbook_pro_1_yfcd.png"
+              src={imgFive}
               className="block w-full rounded-xl h-full object-contain"
               alt="..."
             />
           </div>
           {/* Item 6 */}
-          <div className="carousel-item relative float-left w-full h-96">
+          <div className="carousel-item relative float-left w-full h-full">
             <img
-              src="https://s6.uupload.ir/files/macbook-air_j5r2.png"
+              src={imgSix}
               className="block w-full rounded-xl h-full object-contain"
               alt="..."
             />
@@ -112,7 +118,7 @@ const Carousel = () => {
           data-bs-slide="prev"
         >
           <span className="">
-            <BsFillArrowLeftCircleFill className="w-8 h-8 text-violet-400" />
+            <BsFillArrowLeftCircleFill className="w-8 h-8 text-violet-300" />
           </span>
           <span className="visually-hidden">Previous</span>
         </button>
@@ -123,7 +129,7 @@ const Carousel = () => {
           data-bs-slide="next"
         >
           <span className="">
-            <BsFillArrowRightCircleFill className="w-8 h-8 text-violet-400" />
+            <BsFillArrowRightCircleFill className="w-8 h-8 text-violet-300" />
           </span>
           <span className="visually-hidden">Next</span>
         </button>

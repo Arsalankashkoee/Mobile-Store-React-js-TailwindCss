@@ -54,7 +54,7 @@ const HomePage = () => {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <div className="flex items-center justify-between bg-slate-50 py-4 px-5">
+                <div className="flex items-center justify-between bg-slate-50 py-4 px-5 ">
                   <p>Name : {product.name}</p>
                   <p className="flex items-center">
                     Price : {product.price}
