@@ -118,7 +118,7 @@ const Carousel = () => {
           data-bs-slide="prev"
         >
           <span className="">
-            <BsFillArrowLeftCircleFill className="w-8 h-8 text-violet-300" />
+            <BsFillArrowLeftCircleFill className="w-6 h-6 md:w-8 md:h-8 relative left-3 md:left-0 text-violet-300" />
           </span>
           <span className="visually-hidden">Previous</span>
         </button>
@@ -129,7 +129,7 @@ const Carousel = () => {
           data-bs-slide="next"
         >
           <span className="">
-            <BsFillArrowRightCircleFill className="w-8 h-8 text-violet-300" />
+            <BsFillArrowRightCircleFill className="w-6 h-6 md:w-8 md:h-8 relative right-3 md:right-0 text-violet-300" />
           </span>
           <span className="visually-hidden">Next</span>
         </button>

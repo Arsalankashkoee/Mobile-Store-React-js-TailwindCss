@@ -9,6 +9,7 @@ import { IoMenuSharp } from "react-icons/io5";
 import { AiFillHome } from "react-icons/ai";
 import { ImBlogger } from "react-icons/im";
 import { MdOutlineHelp } from "react-icons/md";
+import { HiOutlineX } from "react-icons/hi";
 import React, { useState } from "react";
 
 const Header = () => {
@@ -22,13 +23,13 @@ const Header = () => {
       <header className="bg-violet-200 shadow-lg p-2 mb-5  sticky top-0 z-10">
         <nav className="container w-full flex items-center justify-between">
           {/* left */}
-          <ul className="hidden md:flex md:items-center justify-center gap-11">
+          <ul className="hidden md:flex md:items-center justify-center gap-11 z-10">
             <li className=" hover:text-violet-600">
               <Link to="/">
                 <img
-                  className="w-14 h-14 rounded-full"
+                  className="w-14 h-14 rounded-full border border-gray-300"
                   src={logoArsalan}
-                  alt=""
+                  alt="logo site"
                 />
               </Link>
             </li>
@@ -72,7 +73,7 @@ const Header = () => {
 
           {/* hamburger-menu */}
           <button
-            className="block md:hidden text-violet-700"
+            className="block md:hidden text-violet-700 "
             onClick={() => setIsShow(!isShow)}
           >
             <IoMenuSharp className="w-7 h-7 text-violet-700" />
@@ -107,37 +108,69 @@ const Header = () => {
       </header>
 
       {isShow && (
-        <div className=" bg-white shadow-lg rounded-lg mb-5 py-1 ">
-          <ul
-            className="container text-slate-600"
+        <section className="">
+          {/* backdrop */}
+          <div
+            className="w-screen h-screen fixed top-0 bottom-0 bg-gray-400 opacity-50 z-20"
             onClick={() => setIsShow(false)}
-          >
-            <li className="mb-2">
-              <Link to="/" className="flex items-center gap-2">
-                <span className="">
-                  <AiFillHome className="text-violet-700" />
-                </span>
-                <span className="">Home</span>
-              </Link>
-            </li>
-            <li className="mb-2">
-              <Link to="/blogs" className="flex items-center gap-2">
-                <span className="">
-                  <ImBlogger className="text-violet-700" />
-                </span>
-                <span className="">Blogs</span>
-              </Link>
-            </li>
-            <li className="mb-2">
-              <Link to="/aboutUs" className="flex items-center gap-1">
-                <span className="">
-                  <MdOutlineHelp className="text-violet-700 w-5 h-5" />
-                </span>
-                <span className="">About Us</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
+          ></div>
+
+          {/* navBar */}
+          <div className=" bg-white shadow-lg rounded-tr-lg mb-5 z-50 fixed top-0 left-0 h-screen w-72 ">
+            {/* icon close menu */}
+            <div className="container flex items-center justify-between">
+              {/* close menu */}
+              <div
+                className="fixed top-7 left-56 cursor-pointer"
+                onClick={() => setIsShow(false)}
+              >
+                <HiOutlineX className="text-violet-700 w-7 h-7" />
+              </div>
+              {/* logo site */}
+              <div className="mt-4">
+                <img
+                  src={logoArsalan}
+                  alt="logo site"
+                  className="w-14 h-14 rounded-full border border-gray-300"
+                />
+              </div>
+            </div>
+            {/* line */}
+            <div className="w-full h-[1px] bg-gray-300 mt-5 px-7"></div>
+            {/* menu */}
+            <div className="py-7">
+              <ul
+                className="container text-slate-600 text-lg"
+                onClick={() => setIsShow(false)}
+              >
+                <li className="mb-5">
+                  <Link to="/" className="flex items-center gap-1">
+                    <span className="">
+                      <AiFillHome className="text-violet-700" />
+                    </span>
+                    <span className="">Home</span>
+                  </Link>
+                </li>
+                <li className="mb-5">
+                  <Link to="/blogs" className="flex items-center gap-1">
+                    <span className="">
+                      <ImBlogger className="text-violet-700" />
+                    </span>
+                    <span className="">Blogs</span>
+                  </Link>
+                </li>
+                <li className="mb-5">
+                  <Link to="/aboutUs" className="flex items-center gap-1">
+                    <span className="">
+                      <MdOutlineHelp className="text-violet-700 w-5 h-5" />
+                    </span>
+                    <span className="">About Us</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       )}
     </React.Fragment>
   );
