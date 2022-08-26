@@ -57,23 +57,18 @@ const SignUpForm = () => {
   const auth = useAuth();
 
   const location = useLocation();
-  // console.log(location.search);
 
   // queryString
   const parsed = queryString.parse(location.search);
-  console.log(parsed.redirect);
 
   const redirect = parsed.redirect || "/";
-  // console.log(redirect);
 
   useEffect(() => {
-    if(auth) navigate(`/${redirect}`, { replace: true });
-  }, [auth,redirect]);
+    if (auth) navigate(`/${redirect}`, { replace: true });
+  }, [auth, redirect]);
 
   // POST User's data
   const onSubmit = async (values) => {
-    // console.log(values);
-
     const userData = {
       name: values.name,
       email: values.email,
@@ -86,7 +81,6 @@ const SignUpForm = () => {
       setAuth(data);
       // localStorage.setItem("authState", JSON.stringify(data));
       toast.success("Registration was successfully");
-      // console.log(data);
       navigate(`/${redirect}`, { replace: true });
     } catch (error) {
       console.log(error);

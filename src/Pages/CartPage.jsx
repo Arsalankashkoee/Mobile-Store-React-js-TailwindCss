@@ -108,8 +108,6 @@ const CartSummary = () => {
     ? cart.reduce((acc, curr) => acc + curr.quantity * curr.offPrice, 0)
     : 0;
 
-  // console.log(orginalTotalPrice);
-
   return (
     <section className="w-1/3 h-auto rounded-lg overflow-hidden bg-white border border-gray-300 shadow-lg sticky top-24 py-4 px-5">
       <h2 className="font-semibold  text-lg border-b border-b-gray-300 pb-2">
@@ -143,7 +141,6 @@ const CartSummary = () => {
             <BsCurrencyDollar />
           </span>
         </div>
-        {/* <div className="font-semibold">{orginalTotalPrice} $</div> */}
       </div>
 
       <Link to={{ pathname: "/login", search: "redirect=checkout" }}>

@@ -28,6 +28,9 @@
     max-width: 1280px;
   }
 }
+.sidebar {
+  transition: all 0.3s ease-in-out;
+}
 
 body {
   background-color: #f1f5f9;

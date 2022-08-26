@@ -17,7 +17,6 @@ const HomePage = () => {
   const dispatch = useCartActions();
 
   const addProductHandler = (product) => {
-    // console.log(product);
     dispatch({ type: "ADD_TO_CART", payload: product });
     toast.success(`${product.name} added to cart successfully !`);
   };

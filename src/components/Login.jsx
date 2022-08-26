@@ -25,36 +25,30 @@ const validationSchema = yup.object({
 
 const Login = () => {
   let navigate = useNavigate();
+
   // AuthProvider
   const setAuth = useAuthActions();
   const auth = useAuth();
 
   const location = useLocation();
-  // console.log(location.search);
 
   // queryString
   const parsed = queryString.parse(location.search);
-  // console.log(parsed.redirect);
 
   const redirect = parsed.redirect || "/";
-  // console.log(redirect);
 
   useEffect(() => {
     if (auth) navigate(`/${redirect}`, { replace: true });
   }, [auth, redirect]);
 
   const onSubmit = async (values) => {
-    // console.log(values);
     try {
       const { data } = await loginUser(values);
       setAuth(data);
       // localStorage.setItem("authState", JSON.stringify(data));
       toast.success("Login was successfully");
       navigate(`/${redirect}`, { replace: true });
-      // console.log(data);
     } catch (error) {
-      // console.log(error);
-      // console.log(error.response.data.message);
       toast.error(`${error.response.data.message}`);
     }
   };
@@ -64,7 +58,8 @@ const Login = () => {
     onSubmit,
     //(yup)
     validationSchema,
-    validateOnMount: true, //disable form-button
+    //disable form-button
+    validateOnMount: true, 
   });
 
   return (

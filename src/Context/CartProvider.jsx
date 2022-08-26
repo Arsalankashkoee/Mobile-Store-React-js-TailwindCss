@@ -17,9 +17,7 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART": {
-      // console.log(action,state);
       const updatedCart = [...state.cart];
-      // console.log(updatedCart);
 
       //if product exist return index && not exist return -1
       const index = updatedCart.findIndex(
@@ -72,9 +70,8 @@ const reducer = (state, action) => {
 
 const CartProvider = ({ children }) => {
   const [cart, dispatch] = useReducer(reducer, initialState);
-  // console.log(cart.cart);
-  // console.log(cart.total);
 
+  // set item's cart in local storage
   useEffect(() => {
     const data = JSON.stringify(cart.cart);
     localStorage.setItem(LOCAL_STORAGE_PRODUCT_KEY, data);
