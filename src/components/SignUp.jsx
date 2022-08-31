@@ -119,7 +119,7 @@ const SignUpForm = () => {
           formik={formik}
           label="Phone Number"
           name="phoneNumber"
-          type="number"
+          type="text"
           placeholder="enter your phone number ..."
         />
         <Input

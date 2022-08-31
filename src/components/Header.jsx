@@ -13,7 +13,7 @@ const Header = () => {
   const userData = useAuth();
 
   return (
-    <React.Fragment className="mb-11">
+    <React.Fragment >
       <header className="bg-violet-200 shadow-lg p-2 mb-5  sticky top-0 z-10">
         <nav className="container w-full flex items-center justify-between">
           {/* left */}

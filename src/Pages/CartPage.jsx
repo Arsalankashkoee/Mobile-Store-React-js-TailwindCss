@@ -30,7 +30,7 @@ const CartPage = () => {
     );
 
   return (
-    <main className="container flex items-start justify-start gap-7">
+    <main className="container flex items-start justify-start  gap-7">
       {/* cart detail */}
       <section className="w-2/3 flex flex-col gap-5">
         {cartState.cart.map((cart) => {
