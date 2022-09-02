@@ -23,11 +23,11 @@ const CheckOut = () => {
   return (
     <main className="">
       <section className="container ">
-        <div className="flex items-start justify-start gap-7">
+        <div className="flex flex-col md:flex-row items-start justify-start gap-7">
           {auth ? (
             <>
               {/* User data */}
-              <div className="w-2/3 bg-white px-5 py-3 rounded-lg shadow-lg border border-gray-300">
+              <div className="w-full md:w-2/3 bg-white px-5 py-3 rounded-lg shadow-lg border border-gray-300 text-sm lg:text-base">
                 <h2 className="font-semibold text-lg mb-5 border-b border-b-gray-300 pb-2">
                   Checkout details
                 </h2>
@@ -35,8 +35,9 @@ const CheckOut = () => {
                 <p className="mb-1">Email : {auth.email}</p>
                 <p className="mb-1">Phone Number : {auth.phoneNumber}</p>
               </div>
+
               {/* Cart Data */}
-              <div className="w-1/3 bg-white px-5 py-3 rounded-lg shadow-lg border border-gray-300">
+              <div className="w-full md:w-1/3 bg-white px-5 py-3 rounded-lg shadow-lg border border-gray-300 text-sm lg:text-base">
                 <h2 className="font-semibold  text-lg border-b border-b-gray-300 pb-2 mb-5">
                   cart summary
                 </h2>

@@ -65,7 +65,7 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center">
       <form
-        className="flex flex-col bg-white w-1/3 p-3 mt-5 rounded-lg shadow-lg border border-gray-300 "
+        className="flex flex-col bg-white w-full md:w-1/2 lg:w-1/3  p-3 mt-5 rounded-lg shadow-lg border border-gray-300 "
         onSubmit={formik.handleSubmit}
       >
         <Input

@@ -32,17 +32,17 @@ const ProductDetailPage = () => {
   };
 
   return (
-    <section className="container flex items-start justify-between">
-      <div className="flex w-1/2 shadow-lg border border-gray-300 rounded-lg">
+    <section className="container flex flex-col lg:flex-row items-start justify-between">
+      <div className="flex w-full lg:w-1/2 shadow-lg border border-gray-300 rounded-lg">
         {/* img */}
-        <section className="w-80 h-80 ">
+        <section className="w-60 h-60 lg:w-80 lg:h-80 ">
           <div className="w-full h-full bg-white rounded-tl-lg rounded-bl-lg p-5">
             <img src={image} alt="" className="w-full h-full object-contain" />
           </div>
         </section>
 
         {/* info */}
-        <section className="bg-white p-5 w-full h-auto rounded-tr-lg rounded-br-lg ">
+        <section className="bg-white p-5 w-full h-auto rounded-tr-lg rounded-br-lg text-sm lg:text-base ">
           <h2 className="text-lg font-semibold mb-5">{name}</h2>
           <div className="mb-2">
             <span className="text-slate-500">Display :</span>
@@ -64,7 +64,7 @@ const ProductDetailPage = () => {
       </div>
 
       {/* seller */}
-      <section className="bg-gray-200 w-1/2 h-80  ml-7 p-5 rounded-lg shadow-lg border border-gray-300">
+      <section className="bg-gray-200 w-full lg:w-1/2 h-80 mt-7 lg:mt-0  lg:ml-7 p-5 rounded-lg shadow-lg border border-gray-300 text-sm lg:text-base">
         <div className=" mb-7 flex">
           <div className="flex items-center">
             <span className="">

@@ -30,9 +30,9 @@ const CartPage = () => {
     );
 
   return (
-    <main className="container flex items-start justify-start  gap-7">
+    <main className="container flex flex-col md:flex-row items-start justify-start  gap-7">
       {/* cart detail */}
-      <section className="w-2/3 flex flex-col gap-5">
+      <section className="w-full md:w-2/3 flex flex-col gap-5">
         {cartState.cart.map((cart) => {
           return (
             <section
@@ -48,15 +48,18 @@ const CartPage = () => {
               </div>
 
               <div className="py-4 px-5 w-full flex items-center justify-between gap-7 ml-5 ">
-                <div className="flex flex-col justify-center gap-3">
-                  <p>Name : {cart.name}</p>
+                <div className="flex flex-col justify-center gap-3 text-sm font-semibold md:font-normal md:text-base">
+                  <p className="flex flex-col md:flex-row">
+                    <span> {cart.name}</span>
+                  </p>
                   <p className="flex items-center">
-                    Price : {cart.offPrice * cart.quantity}{" "}
+                    Price : {cart.offPrice * cart.quantity}
                     <span>
                       <BsCurrencyDollar />
                     </span>
                   </p>
                 </div>
+
                 <div className="flex items-center gap-5">
                   <button
                     className="border border-violet-600 py-1 px-2 rounded-md bg-violet-100"
@@ -109,7 +112,7 @@ const CartSummary = () => {
     : 0;
 
   return (
-    <section className="w-1/3 h-auto rounded-lg overflow-hidden bg-white border border-gray-300 shadow-lg sticky top-24 py-4 px-5">
+    <section className="w-full md:w-1/3 text-sm md:text-base h-auto rounded-lg overflow-hidden bg-white border border-gray-300 shadow-lg sticky top-24 py-4 px-5">
       <h2 className="font-semibold  text-lg border-b border-b-gray-300 pb-2">
         cart summary
       </h2>
