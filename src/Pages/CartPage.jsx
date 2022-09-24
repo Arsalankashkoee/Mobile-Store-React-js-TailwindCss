@@ -49,32 +49,34 @@ const CartPage = () => {
 
               <div className="py-4 px-5 w-full flex items-center justify-between gap-7 ml-5 ">
                 <div className="flex flex-col justify-center gap-3 text-sm font-semibold md:font-normal md:text-base">
-                  <p className="flex flex-col md:flex-row">
-                    <span> {cart.name}</span>
+                  <p className="flex flex-col md:flex-row ">
+                    <span className="truncate w-20 md:w-40"> {cart.name}</span>
                   </p>
                   <p className="flex items-center">
-                    Price : {cart.offPrice * cart.quantity}
+                    {cart.offPrice * cart.quantity}
                     <span>
                       <BsCurrencyDollar />
                     </span>
                   </p>
                 </div>
 
-                <div className="flex items-center gap-5">
+                <div className="flex items-center gap-2 md:gap-5">
                   <button
-                    className="border border-violet-600 py-1 px-2 rounded-md bg-violet-100"
+                    className="border border-violet-600 py-[px] px-[5px] md:py-1 md:px-2 rounded-md bg-violet-100"
                     onClick={() => incrementHandler(cart)}
                   >
                     +
                   </button>
-                  <span className="border border-violet-600 py-1 px-2 rounded-md bg-violet-50">
+
+                  <span className="border border-violet-600 py-[px] px-[5px] md:py-1 md:px-2 rounded-md bg-violet-50">
                     {cart.quantity}
                   </span>
+
                   <button
                     className={
                       cart.quantity === 1
-                        ? "border border-red-600 p-1 rounded-md"
-                        : "border border-violet-600 py-1 px-2 rounded-md"
+                        ? "border border-red-600 py-[px] px-[5px] md:p-1 rounded-md"
+                        : "border border-violet-600 py-[px] px-[5px] md:py-1 md:px-2 rounded-md"
                     }
                     onClick={() => decrementHandler(cart)}
                   >
@@ -116,6 +118,7 @@ const CartSummary = () => {
       <h2 className="font-semibold  text-lg border-b border-b-gray-300 pb-2">
         cart summary
       </h2>
+
       <div className="border-b border-b-gray-200 pb-5">
         <div className="flex items-center justify-between mt-5">
           <div className="">products price</div>
@@ -126,6 +129,7 @@ const CartSummary = () => {
             </span>
           </div>
         </div>
+
         <div className="flex items-center justify-between mt-5">
           <div className="">Cart Discount</div>
           <div className="flex items-center">
@@ -136,6 +140,7 @@ const CartSummary = () => {
           </div>
         </div>
       </div>
+
       <div className="flex items-center justify-between mt-5">
         <div className="font-semibold">Total Price</div>
         <div className="font-semibold flex items-center">
