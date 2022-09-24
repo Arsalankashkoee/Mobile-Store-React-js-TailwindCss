@@ -62,17 +62,6 @@ const CartPage = () => {
 
                 <div className="flex items-center gap-2 md:gap-5">
                   <button
-                    className="border border-violet-600 py-[px] px-[5px] md:py-1 md:px-2 rounded-md bg-violet-100"
-                    onClick={() => incrementHandler(cart)}
-                  >
-                    +
-                  </button>
-
-                  <span className="border border-violet-600 py-[px] px-[5px] md:py-1 md:px-2 rounded-md bg-violet-50">
-                    {cart.quantity}
-                  </span>
-
-                  <button
                     className={
                       cart.quantity === 1
                         ? "border border-red-600 py-[px] px-[5px] md:p-1 rounded-md"
@@ -85,6 +74,17 @@ const CartPage = () => {
                     ) : (
                       "-"
                     )}
+                  </button>
+
+                  <span className="border border-violet-600 py-[px] px-[5px] md:py-1 md:px-2 rounded-md bg-violet-50">
+                    {cart.quantity}
+                  </span>
+
+                  <button
+                    className="border border-violet-600 py-[px] px-[5px] md:py-1 md:px-2 rounded-md bg-violet-100"
+                    onClick={() => incrementHandler(cart)}
+                  >
+                    +
                   </button>
                 </div>
               </div>
